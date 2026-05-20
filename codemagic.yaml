@@ -9,7 +9,7 @@ workflows:
       - name: Get Flutter packages
         script: flutter pub get
       - name: Build release APK
-        script: flutter build apk --release --no-shrink
+        script: flutter build apk --release --no-shrink --android-skip-build-dependency-validation
     artifacts:
       - build/app/outputs/flutter-apk/app-release.apk
     publishing:
